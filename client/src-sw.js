@@ -34,13 +34,13 @@ registerRoute(
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
-      // new ExpirationPlugin({
-      //   maxAgeSeconds,
-      //   maxEntries,
-      // }),
+      new ExpirationPlugin({
+        maxAgeSeconds,
+        maxEntries,
+      }),
     ],
   })
 );
 
-//offlineFallback();
+offlineFallback();
 
